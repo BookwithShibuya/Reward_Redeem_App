@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  color: #fff; /* เปลี่ยนสีเป็นสีส้ม (หรือเปลี่ยนตามต้องการ) */
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,6 +17,41 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.login-page {
+  background: url(./components/Assets/bg3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page{
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* สีพื้นหลัง (เปลี่ยนสีได้) */
+  background-image: url(./components/Assets/bg1.jpg); /* ใส่รูปภาพพื้นหลัง */
+  background-size: cover; /* ขยายรูปให้เต็มจอ */
+  background-position: center; /* จัดรูปให้อยู่ตรงกลาง */
+  background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
+  height: 100vh; /* เต็มความสูงจอ */
+  width: 100vw; /* เต็มความกว้างจอ */
+}
+
+.detail-bg{
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* สีพื้นหลัง (เปลี่ยนสีได้) */
+  background-image: url(./components/Assets/bg1.jpg); /* ใส่รูปภาพพื้นหลัง */
+  background-size: cover; /* ขยายรูปให้เต็มจอ */
+  background-position: center; /* จัดรูปให้อยู่ตรงกลาง */
+  background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
+  height: 100vh; /* เต็มความสูงจอ */
+  width: 100vw; /* เต็มความกว้างจอ */
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

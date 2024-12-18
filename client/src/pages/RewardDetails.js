@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchRewards } from '../services/api';
+import '../components/DetialForm/DetailPage.css';
 
 function RewardDetails() {
   const { id } = useParams();
@@ -71,6 +72,7 @@ function RewardDetails() {
   if (!reward) return <div>Loading...</div>;
 
   return (
+    <div className='detail-bg'>
     <div style={{ padding: '20px' }}>
       <h1>{reward.name}</h1>
       <img src={reward.image} alt={reward.name} style={{ width: '100%', maxWidth: '300px' }} />
@@ -83,8 +85,9 @@ function RewardDetails() {
       ) : userPoints < reward.points ? (
         <button disabled>Insufficient Points</button>
       ) : (
-        <button onClick={handleRedeem}>Redeem</button>
+        <button className='redeem-button' onClick={handleRedeem}>Redeem</button>
       )}
+    </div>
     </div>
   );
 }

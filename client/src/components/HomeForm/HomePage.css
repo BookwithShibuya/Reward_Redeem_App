@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+:root {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+  --text-color: #222224;
+  --scrollbar-bg: #797979;
+  --scrollbar-hover: #222224;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--scrollbar-bg);
+  transition: background 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 124rem;
+  padding: 4rem 1rem;
+  margin: 0 auto;
+}
+
+.heading {
+  padding: 1rem 0;
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Swiper container */
+.swiper_container {
+    width: 100%; /* ความกว้างไม่เกินขอบจอ */
+    max-width: 1200px; /* จำกัดขนาดสูงสุดเพื่อไม่ให้ล้นจอ */
+    margin: 0 auto; /* จัดกึ่งกลางคอนเทนเนอร์ */
+    overflow: hidden; /* ป้องกันการล้นของลูก */
+}
+
+.swiper-slide {
+    width: 100%; /* ใช้เต็มพื้นที่ของ container */
+    max-width: 300px; /* ขนาดเหมาะสมของ coupon */
+    height: auto; /* ปรับความสูงอัตโนมัติ */
+}
+
+.swiper-slide img {
+    width: 100%; /* รูปเต็มพื้นที่คอนเทนเนอร์ */
+    height: auto;
+    object-fit: contain;/* ปรับให้รูปอยู่ครบภายในคอนเทนเนอร์ */
+}
+
+/* For shadows in swiper effect */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+/* Swiper navigation arrows */
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controler .swiper-button-next,
+.slider-controler .swiper-button-prev {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 24px rgba(18, 28, 53, 0.1);
+}
+
+.slider-controler .swiper-button-next::after,
+.slider-controler .swiper-button-prev::after {
+  content: "";
+}
+
+.slider-controler .swiper-button-next ion-icon,
+.slider-controler .swiper-button-prev ion-icon {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.slider-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+.slider-controler .swiper-button-prev {
+  left: 42% !important;
+  transform: translateX(-42%) !important;
+}
+
+/* Responsive arrow alignment */
+@media (max-width: 990px) {
+  .slider-controler .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+  .slider-controler .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+  .slider-controler .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+/* Swiper pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 2rem; /* กำหนดระยะห่างจากด้านล่าง */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    align-items: center;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/* Responsive swiper container */
+@media (max-width: 500px) {
+  .swiper_container {
+    height: 47rem;
+  }
+  .swiper-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .swiper-slide img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.box-title-home-page{
+  width: 100%; /* ความกว้างยาวเต็มจอ */
+  max-width: 100%; /* ป้องกันไม่ให้เกินขอบจอ */
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  height: auto;
+}

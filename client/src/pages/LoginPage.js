@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
+import { FaUser } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
+import '../components/LoginForm/LoginPage.css';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
@@ -19,11 +22,25 @@ function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <input placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
+    <div className="login-page">
+    <div className='wrapper'>
+      <form action="">
+      <h1>Reward Redeem</h1> 
+      <div className='input-box'>
+        <input placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
+        <FaUser className='icon' />
+      </div>
+      <div className='input-box'>
+        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        <FaLock className='icon'/>
+      </div>
+      <div>
+        <button type="button" onClick={handleLogin}>Login</button>
+      </div>
+      <div className='welcome'><h4> Welcome to Reward Redeem App</h4>
+      </div>
+      </form>
+    </div>
     </div>
   );
 }
